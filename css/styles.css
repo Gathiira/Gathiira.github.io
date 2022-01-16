@@ -57,7 +57,7 @@ a.btn {
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
-  border-radius: 2px;
+  border-radius: 10px;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
@@ -114,7 +114,8 @@ a.btn:hover {
 
 .header {
   background: #00bcd4;
-  color: #fff;
+  color: black;
+  height: fit-content;
 }
 
 .header a {
@@ -125,6 +126,10 @@ a.btn:hover {
   position: relative;
   padding-top: 15px;
   padding-bottom: 120px;
+  background-image: url("profile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .header .social {
@@ -155,6 +160,11 @@ a.btn:hover {
   border-color: #fff;
 }
 
+.social-links {
+  background-color: #008fa1;
+  border-radius: 50%;
+}
+
 .header .actions {
   position: absolute;
   right: 15px;
@@ -163,6 +173,7 @@ a.btn:hover {
 
 .header .actions .fa {
   margin-right: 5px;
+  color: #008fa1;
 }
 
 .header .actions a {
@@ -177,43 +188,106 @@ a.btn:hover {
 .header .profile-image {
   position: absolute;
   width: 140px;
-  border-radius: 50%;
+  border-radius: 70px;
   object-fit: fill;
   height: 160px;
   top: -80px;
   margin-left: -80px;
-  left: 50%;
+  background-color: lightgray;
 }
 
-.profile-image img:hover {
-  border-radius: 10%;
-  cursor: pointer;
+.profile-image:hover {
+  background: lightgray;
+  border-radius: 10px;
+}
+
+@keyframes text-move {
+  0%   {color: white;}
+  25%  {color: black;}
+  50%  {color: blue;}
+  75%  {color: green;}
+  100% {color: black;}
 }
 
 .header .name {
   font-size: 48px;
-  margin-bottom: 15px;
   letter-spacing: 0.5px;
+  animation-name: text-move;
+  animation-duration: 30s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
 }
 
 .header .title {
   font-size: 28px;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+  color: rgb(27, 26, 26);
   margin-bottom: 30px;
 }
 
 .header .intro {
-  background: #00a5bb;
   padding-top: 90px;
   padding-bottom: 30px;
   position: relative;
   font-size: 16px;
+  display: flex;
 }
 
 .header .profile {
   max-width: 800px;
   margin: 0 auto;
+  text-align: start;
+  font-size: 18px;
+}
+
+.header .profile .current-job {
+  padding-top: 20px;
+  animation-name: text-move;
+  animation-duration: 30s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+.header .profile .profile-link {
+  font-size: 20px;
+  animation-name: text-move;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-timing-function: ease-in-out;
+}
+
+.header .intro-details {
+  margin-top: 5%;
+  display: flex;
+  gap: 10px;
+}
+
+@media all and (max-width: 600px) {
+    /* styles here */
+    .header .intro-details {
+      margin-top: 5px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+}
+
+.header .intro-details .intro-details-items {
+  flex-basis: 100%;
+  text-align: center;
+  padding: 5px;
+  margin-top: 5px;
+  color: #24292e;
+  border: 1px solid #008fa1;
+  border-radius: 20px;
+}
+.header .intro-details .intro-details-items .intro-details-items-title {
+  text-align: center;
 }
 
 /* Page Nav */
@@ -317,9 +391,10 @@ a.btn:hover {
 
 .section-title {
   margin-top: 0;
-  margin-bottom: 45px;
+  margin-bottom: 30px;
   font-size: 24px;
   text-align: center;
+  color: #00a5bb;
 }
 
 .timeline {
@@ -610,7 +685,7 @@ Portfolio Section
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
-  border-radius: 2px;
+  border-radius: 10px;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
@@ -659,7 +734,6 @@ Contact section start here
 */
 .contact-section .intro {
   position: relative;
-  padding: 30px;
   padding-left: 190px;
   font-size: 16px;
   color: #24292e;
@@ -672,21 +746,18 @@ Contact section start here
   left: 30px;
 }
 
-.contact-section .intro p {
-  margin-bottom: 15px;
-}
-
 .contact-section .service-list {
   margin-left: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .contact-section .service-list li {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .contact-section .service-list .fa {
   color: #00bcd4;
+  margin: 5px;
 }
 
 .contact-section .social {
@@ -713,13 +784,12 @@ Contact section start here
 }
 
 .footer .container {
-  /*padding: 30px;*/
-  color: #8a8a8a;
+  color: #007888;
   letter-spacing: 0.5px;
 }
 
 .footer .container a {
-  color: #8a8a8a;
+  color: #007888;
 }
 
 /* Extra small devices (phones, less than 768px) */
@@ -773,6 +843,7 @@ Contact section start here
 
   .section-title {
     font-size: 20px;
+    color: #00a5bb;
   }
 
   .timeline {
@@ -826,7 +897,7 @@ Contact section start here
 
   .contact-section .intro {
     padding: 0;
-    text-align: center;
+    text-align: start;
   }
 
   .contact-section .intro .profile-image {
@@ -1038,7 +1109,20 @@ Contact section start here
 }
 
 .book-section .item-inner {
-  padding: 0 30px;
+  padding: 10px;
+  border: 1px solid lightgray;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 10px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  position: relative;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
 }
 
 .book-section .category {
@@ -1064,7 +1148,20 @@ Contact section start here
 }
 
 .education-section .item-inner {
-  padding: 0 30px;
+  padding: 10px;
+  border: 1px solid lightgray;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 10px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  position: relative;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
 }
 
 .education-section .category {
@@ -1102,4 +1199,10 @@ Contact section start here
   object-fit: contain;
   width: 100%;
   height: 250px;
+}
+
+.portfolio-image-edu {
+  object-fit: contain;
+  width: 100%;
+  height: 100%
 }
