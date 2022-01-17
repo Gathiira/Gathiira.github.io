@@ -242,6 +242,10 @@ a.btn:hover {
   font-size: 18px;
 }
 
+.profile:hover {
+  font-weight: 500;
+}
+
 .header .profile .current-job {
   padding-top: 20px;
   animation-name: text-move;
