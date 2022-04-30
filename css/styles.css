@@ -242,9 +242,9 @@ a.btn:hover {
   font-size: 18px;
 }
 
-.profile:hover {
+/* .profile:hover {
   font-weight: 500;
-}
+} */
 
 .header .profile .current-job {
   padding-top: 20px;
@@ -1203,6 +1203,7 @@ Contact section start here
   object-fit: contain;
   width: 100%;
   height: 250px;
+  border-radius: 10px;
 }
 
 .portfolio-image-edu {
