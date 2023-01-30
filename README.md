@@ -1,10 +1,11 @@
 # Hello there 👋
   
-- 👨 I am **Gathiira Mwangi**, working as a **Backend Engineer** at [Sky.Garden](https://sky.garden)
-- 💻 I have 2+ years of work experience in the Software Development field.
-- 🌱 I’m currently learning React JS & Cloud(Azure, GCP, AWS).
+- 👨 I am **Gathiira Mwangi**, a **Software Engineer 👨‍💻 🫣**
+- 💻 I have 3+ years of work experience in the Software Development field.
+- 🌱 I’m currently advancing my skills in Cloud(Azure, GCP, AWS) and System Security.
 - 💞️ Interests &rarr; Coding, listening to music and Planting Trees.
-- 👯 I’m always in for a collaboration. Hit me up if you have a cool project we can code.
+- 👯 I’m always in for a collaboration. Hit me up if you have a cool project.
+- 💬 Ask me anything related to python or React 🤫
 
 ## Tech Stack
 
@@ -51,3 +52,7 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gathiira-mwangi/)
 [![Portfolio](https://img.shields.io/badge/Portfolio-1DA1F2?style=for-the-badge&logo=website&logoColor=white)](https://gathiira.github.io/)
+
+<!--
+**Gathiira/Gathiira** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+-->
