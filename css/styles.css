@@ -203,19 +203,19 @@ a.btn:hover {
 
 @keyframes text-move {
   0% {
-    color: white;
+    color: rgb(46, 45, 45);
   }
   25% {
-    color: black;
+    color: rgb(122, 119, 119);
   }
   50% {
-    color: blue;
+    color: rgb(7, 92, 84);
   }
   75% {
-    color: green;
+    color: rgb(53, 154, 53);
   }
   100% {
-    color: black;
+    color: rgb(104, 160, 142);
   }
 }
 

@@ -69,7 +69,8 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <link rel="image_src" href="images/passport.png">
-
+    <!-- Load all components -->
+    <script src="https://cdn.jsdelivr.net/npm/@mariusbongarts/previewbox/dist/index.min.js"></script>
 
 </head>
 
@@ -109,7 +110,7 @@
                     <p>
                         I'm a competent software Engineer with 4+ years of professional experience . I have a strong
                         understanding of Python, Java,
-                        and NextJS concepts and I'm able to apply them to create effective software solutions. I'm
+                        and Javascript concepts and I'm able to apply them to create effective software solutions. I'm
                         also a good problem solver
                         and I'm always looking for ways to improve my skills.
                     </p>
@@ -118,17 +119,13 @@
                     </p> -->
 
                     <div class='intro-details-items'>
-                        <h5 class="intro-details-items-title">Specialties:</h5>
+                        <!-- <h5 class="intro-details-items-title">Specialties:</h5> -->
                         <div class="misc-skills">
-                            <span class="skill-tag">Java</span>,
-                            <span class="skill-tag">Spring Boot</span>,
-                            <span class="skill-tag">Python</span>,
-                            <span class="skill-tag">Django/Drf</span>,
-                            <span class="skill-tag">Javascript</span>,
-                            <span class="skill-tag">ReactJs/NextJs</span>,
-                            <span class="skill-tag">Docker</span>,
-                            <span class="skill-tag">Nginx</span>,
-                            <span class="skill-tag">K8s</span>
+                            <ul style="padding: 0; list-style-type: none;">
+                                <li><b>Languages: </b>Java, Python, Javascript</li>
+                                <li><b>Frameworks: </b>Spring Boot, Django, NextJs, ReactJs</li>
+                                <li><b>Tools & Technologies: </b>Docker, Nginx, K8s, Git</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -145,7 +142,7 @@
                         <li class="nav-item"><a class="scrollto nav-link" href="#experiences-section">Experiences</a>
                         </li>
                         <li class="nav-item"><a class="scrollto nav-link" href="#skills-section">Skills</a></li>
-                        <li class="nav-item"><a class="scrollto nav-link" href="#portfolio-section">Portfolio</a></li>
+                        <li class="nav-item"><a class="scrollto nav-link" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item"><a class="scrollto nav-link" href="#article-section">Articles</a></li>
                         <li class="nav-item"><a class="scrollto nav-link" href="#education-section">Education</a></li>
                         <li class="nav-item"><a class="scrollto nav-link" href="#contact-section">Contact</a></li>
@@ -205,6 +202,36 @@
                             <li>Identify opportunities for process improvement and efficiency, and work to implement
                                 those changes.</li>
                         </ul>
+                        <p>
+                            <b>Key Projects</b>
+                        </p>
+                        <div id="key-project-list" style="display: grid; gap: 20px; list-style-type: none;">
+                            <div>
+                                <ul style="list-style-type: none;">
+                                    <previewbox-link
+                                        style="--pb-background-color: #D3D3D3; --pb-text-color: black; --pb-text-color-light: #000; --pb-fallback-img-color: gray;"
+                                        url="https://app.lipalater.com" 
+                                        title="Lipa Later"
+                                        description="Buy Now and LipaLater in flexible Monthly instalments."
+                                        imageUrl="https://lipalater.com/assets/images/logo.png"
+                                        imageAlt="logo" 
+                                        author="Lipalater"
+                                    >
+                                    </previewbox-link>
+                                    <li><span style="color: #007BB6;">Role:</span> Fullstack Developer</li>
+                                    <li><span style="color: #007BB6;">Stack:</span> NextJs, Java, Springboot</li>
+                                    <li> <span style="color: #007BB6;">Outcome:</span> Simplified loan applications, increasing successful submissions by 25% and enhancing customer satisfaction.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul style="list-style-type: none;">
+                                    <li><b>Loan Management System</b></li>
+                                    <li><span style="color: #007BB6;">Role:</span> Fullstack Developer</li>
+                                    <li><span style="color: #007BB6;">Stack:</span> NextJs, Java, Springboot</li>
+                                    <li> <span style="color: #007BB6;">Outcome:</span> Streamlined loan management, reducing processing time by 30% and accelerating loan approval timelines.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <!--//job-desc-->
                 </div>
@@ -242,6 +269,50 @@
                             <li>Work closely with the product and other teams within the company to deliver new services
                                 as per the roadmap.</li>
                         </ul>
+                        <p>
+                            <b>Key Projects</b>
+                        </p>
+                        <div id="key-project-list" style="display: grid; gap: 20px; list-style-type: none;">
+                            <div>
+                                <ul style="list-style-type: none;"><previewbox-link
+                                    style="--pb-background-color: #D3D3D3; --pb-text-color: black; --pb-text-color-light: #000; --pb-fallback-img-color: gray;"
+                                    url="https://sell.sky.garden" title="Sky.Garden Seller Center"
+                                    description="With Sky.Garden you can upload products and start selling your products immediately via your own free mobile webshop. No cost upon entry. No hidden fees. Fully automated payment and shipping options are integrated out-of-the-box. 100% Safe and secure."
+                                    imageUrl="https://sell.sky.garden/static/media/skygarden_tritone_logo.8797fc01.svg" imageAlt="logo" author="Sky.Garden">
+                                </previewbox-link>
+                                    <li><span style="color: #007BB6;">Role:</span> Fullstack Developer</li>
+                                    <li><span style="color: #007BB6;">Stack:</span> Javascript, ReactJs, Django</li>
+                                    <li> <span style="color: #007BB6;">Outcome:</span> Enhanced merchant experience, increasing daily engagement by 40% through intuitive dashboards.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul style="list-style-type: none;">
+                                    <previewbox-link
+                                        style="--pb-background-color: #D3D3D3; --pb-text-color: black; --pb-text-color-light: #000; --pb-fallback-img-color: gray;"
+                                        url="https://sky.garden/tickets" 
+                                        title="Sky Tickets - Your number one stop online tickets verse!"
+                                        description="With Sky.Garden you can upload products and start selling your products immediately via your own free mobile webshop. No cost upon entry. No hidden fees. Fully automated payment and shipping options are integrated out-of-the-box. 100% Safe and secure."
+                                        imageUrl="https://sky.garden/assets/logos/sky-garden/sg_tickets_logo_main.svg" 
+                                        imageAlt="logo" 
+                                        author="Sky.Garden"
+                                    >
+                                    </previewbox-link>
+                                    <li><span style="color: #007BB6;">Role:</span> Backend Developer</li>
+                                    <li><span style="color: #007BB6;">Stack:</span> Python, Django, Django Rest Framework, MsSQL</li>
+                                    <li> <span style="color: #007BB6;">Outcome:</span> Successfully launched a ticketing selling platform, enhancing customer access to events and increasing sales by 30%.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul style="list-style-type: none;">
+                                    <li><b>Inventory Management Module and System Upgrade</b></li>
+                                    <li><span style="color: #007BB6;">Role:</span> Backend Developer</li>
+                                    <li><span style="color: #007BB6;">Stack:</span> Python, Django, MS SQL, Azure</li>
+                                    <li> <span style="color: #007BB6;">Outcome:</span> Reduced inventory update latency by 70%, significantly improving product availability for merchants and enhancing
+                                    real-time stock visibility. Updated the backend system to modern libraries, improving overall performance, scalability,
+                                    and maintainability of the platform.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <!--//job-desc-->
                 </div>
@@ -275,6 +346,26 @@
                             <li>Developed and managed internal and external system Integrations</li>
                             <li>Conducted unit tests, code reviews, code refactoring and documentation</li>
                         </ul>
+                        <p>
+                            <b>Key Project</b>
+                        </p>
+                        <div id="key-project-list" style="display: grid; gap: 20px; list-style-type: none;">
+                            <div>
+                                <ul style="list-style-type: none;">
+                                    <previewbox-link
+                                        style="--pb-background-color: #D3D3D3; --pb-text-color: black; --pb-text-color-light: #000; --pb-fallback-img-color: gray;"
+                                        url="https://ardhisasa.lands.go.ke" title="Ardhisasa"
+                                        description="Ardhisasa is an online platform that allows Citizens, stakeholders and interested parties to interact with land information held and processes undertaken by Government."
+                                        imageUrl="https://ardhisasa.lands.go.ke/assets/img/logo.png" imageAlt="logo"
+                                        author="Ardhisasa">
+                                    </previewbox-link>
+                                    <li><span style="color: #007BB6;">Role:</span> Backend Developer</li>
+                                    <li><span style="color: #007BB6;">Stack:</span> Python, Django, Nginx, PostgreSQL</li>
+                                    <li> <span style="color: #007BB6;">Outcome:</span> Successfully launched the land management platform, improving accessibility for landowners and streamlining land rent
+                                    payments across Kenya.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <!--//job-desc-->
                 </div>
@@ -296,6 +387,7 @@
                             Flask, SQLAlchemy, Postgresql, Git</p>
                         <p>
                             <b>Responsibilities:</b><br />
+                        </p>
                         <ul>
                             <li>
                                 Built <a target="_blank" href="https://nyuki.co.ke/">product deliverables</a> according
@@ -306,7 +398,6 @@
                             <li>Resolved errors through close collaboration with quality assurance team.</li>
                             <li>Determined feasibility of proposed designs within time and cost constraints.</li>
                         </ul>
-                        </p>
                     </div>
                     <!--//job-desc-->
                 </div>
@@ -400,7 +491,7 @@
 
         <!-- Portfolio Section start here -->
 
-        <section id="portfolio-section" class="book-section section">
+        <section id="portfolio" class="book-section section">
             <h2 class="section-title">Portfolio</h2>
             <div class="row">
                 <!--item-->
