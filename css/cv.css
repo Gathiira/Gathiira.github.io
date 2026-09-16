@@ -1,0 +1,261 @@
+:root{
+  --ink:#16202B;
+  --ink-soft:#4A5568;
+  --paper:#FAFAF8;
+  --paper-raised:#FFFFFF;
+  --line:#DADFE3;
+  --accent:#2563EB;
+  --accent-soft:#E8EFF6;
+  --tag-bg:#EEF1F3;
+  --tag-text:#33414F;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ink:#E7ECF1;
+    --ink-soft:#A8B3BE;
+    --paper:#12181F;
+    --paper-raised:#171F28;
+    --line:#2B3542;
+    --accent:#5B93FF;
+    --accent-soft:#1C2A38;
+    --tag-bg:#1D2731;
+    --tag-text:#C4CDD6;
+  }
+}
+
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.sheet{
+  max-width:760px;
+  margin:0 auto;
+  padding:56px 40px 80px;
+}
+.page-actions{
+  max-width:760px;
+  margin:20px auto 0;
+  padding:0 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+.page-actions a, .page-actions button{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-family:inherit;
+  font-size:0.82rem;
+  font-weight:600;
+  color:var(--ink-soft);
+  background:none;
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:7px 12px;
+  cursor:pointer;
+  text-decoration:none;
+}
+.page-actions a:hover, .page-actions button:hover{ color:var(--accent); border-color:var(--accent); }
+.page-actions svg{ width:14px; height:14px; }
+header.masthead{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:20px;
+  border-bottom:2px solid var(--ink);
+  padding-bottom:18px;
+  margin-bottom:28px;
+  flex-wrap:wrap;
+}
+h1{
+  font-size:1.9rem;
+  font-weight:700;
+  letter-spacing:-0.01em;
+  margin:0 0 4px;
+}
+.role-line{
+  font-size:0.98rem;
+  color:var(--accent);
+  font-weight:500;
+  margin:0;
+}
+.contact{
+  text-align:right;
+  font-size:0.82rem;
+  color:var(--ink-soft);
+  line-height:1.6;
+  white-space:nowrap;
+}
+.contact a{ color:var(--ink-soft); text-decoration:none; }
+.contact a:hover{ color:var(--accent); }
+
+section{ margin-bottom:30px; }
+h2{
+  font-size:0.72rem;
+  font-weight:600;
+  letter-spacing:0.06em;
+  color:var(--accent);
+  margin:0 0 12px;
+  padding-left:12px;
+  border-left:3px solid var(--accent);
+}
+
+.profile p{
+  font-size:0.96rem;
+  line-height:1.65;
+  margin:0;
+  max-width:68ch;
+}
+.profile strong{ color:var(--ink); font-weight:600; }
+
+.skill-row{
+  display:grid;
+  grid-template-columns:150px 1fr;
+  gap:10px 16px;
+  padding:9px 0;
+  border-bottom:1px solid var(--line);
+  align-items:start;
+}
+.skill-row:last-child{ border-bottom:none; }
+.skill-label{
+  font-size:0.78rem;
+  font-weight:600;
+  color:var(--ink-soft);
+  padding-top:3px;
+}
+.tags{ display:flex; flex-wrap:wrap; gap:6px; }
+.tag{
+  font-family:"SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size:0.74rem;
+  background:var(--tag-bg);
+  color:var(--tag-text);
+  border-radius:4px;
+  padding:3px 8px;
+  line-height:1.4;
+}
+
+table.map{
+  width:100%;
+  border-collapse:collapse;
+  font-size:0.86rem;
+}
+table.map th{
+  text-align:left;
+  font-size:0.72rem;
+  letter-spacing:0.04em;
+  color:var(--ink-soft);
+  font-weight:600;
+  padding:0 14px 8px 0;
+  border-bottom:1px solid var(--ink);
+}
+table.map td{
+  padding:11px 14px 11px 0;
+  border-bottom:1px solid var(--line);
+  vertical-align:top;
+  line-height:1.5;
+}
+table.map td:first-child{ width:34%; color:var(--ink-soft); }
+table.map tr:last-child td{ border-bottom:none; }
+
+.role{ margin-bottom:22px; }
+.role:last-child{ margin-bottom:0; }
+.role-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.role-title{ font-size:1.02rem; font-weight:600; }
+.role-dates{
+  font-family:"SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size:0.78rem;
+  color:var(--ink-soft);
+  white-space:nowrap;
+}
+.role-stack{
+  font-size:0.82rem;
+  color:var(--ink-soft);
+  margin:2px 0 10px;
+}
+.role-stack em{ font-style:normal; color:var(--accent); }
+ul.bullets{
+  margin:0;
+  padding-left:18px;
+}
+ul.bullets li{
+  font-size:0.92rem;
+  line-height:1.55;
+  margin-bottom:7px;
+}
+ul.bullets li:last-child{ margin-bottom:0; }
+ul.bullets strong{ color:var(--ink); font-weight:600; }
+
+.edu-title, .ref-name{ font-weight:600; font-size:0.95rem; margin:0 0 2px; }
+.edu-sub, .ref-sub{ font-size:0.85rem; color:var(--ink-soft); margin:0; }
+
+footer.note{
+  margin-top:44px;
+  padding-top:16px;
+  border-top:1px solid var(--line);
+  font-size:0.74rem;
+  color:var(--ink-soft);
+}
+
+@media (max-width:600px){
+  .sheet{ padding:32px 20px 60px; }
+  header.masthead{ flex-direction:column; align-items:flex-start; }
+  .contact{ text-align:left; }
+  .skill-row{ grid-template-columns:1fr; gap:4px; }
+  table.map, table.map thead, table.map tbody, table.map th, table.map td, table.map tr{ display:block; }
+  table.map thead{ display:none; }
+  table.map tr{ border-bottom:1px solid var(--line); padding:10px 0; }
+  table.map td{ border-bottom:none; padding:2px 0; }
+  table.map td:first-child{ width:auto; font-weight:600; color:var(--ink); }
+}
+
+@media (max-width:520px){
+  .page-actions{ padding:0 20px; }
+}
+
+@media print{
+  @page{ size:auto; margin:0; }
+  html{ font-size:14px; }
+  body{ background:#fff; color:#000; margin:0; }
+  .sheet{ max-width:none; padding:12mm 14mm; }
+  .page-actions{ display:none; }
+  a{ color:inherit; text-decoration:none; }
+
+  header.masthead{ padding-bottom:10px; margin-bottom:16px; }
+  h1{ font-size:1.5rem; margin:0 0 2px; }
+  .role-line{ font-size:0.86rem; }
+  .contact{ font-size:0.74rem; line-height:1.45; }
+
+  section{ margin-bottom:14px; }
+  h2{ font-size:0.66rem; margin:0 0 8px; }
+
+  .profile p{ font-size:0.84rem; line-height:1.45; }
+
+  .skill-row{ padding:5px 0; break-inside:avoid; }
+  .skill-label{ font-size:0.72rem; }
+  .tag{ font-size:0.68rem; padding:2px 6px; }
+
+  table.map{ font-size:0.76rem; }
+  table.map th{ padding:0 10px 5px 0; }
+  table.map td{ padding:6px 10px 6px 0; }
+  table.map tr{ break-inside:avoid; }
+
+  .role{ margin-bottom:12px; break-inside:avoid; }
+  .role-title{ font-size:0.9rem; }
+  .role-dates{ font-size:0.7rem; }
+  .role-stack{ font-size:0.74rem; margin:1px 0 6px; }
+  ul.bullets li{ font-size:0.8rem; line-height:1.4; margin-bottom:4px; }
+
+  .edu-title, .ref-name{ font-size:0.84rem; }
+  .edu-sub, .ref-sub{ font-size:0.76rem; }
+}
