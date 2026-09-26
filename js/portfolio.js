@@ -57,6 +57,30 @@
     revealEls.forEach(function (el) { el.classList.add('in-view'); });
   }
 
+  // Hero activity graph: draw in on arrival
+  var activityGraph = document.querySelector('.hero-activity-graph');
+  if (activityGraph) {
+    window.requestAnimationFrame(function () {
+      setTimeout(function () { activityGraph.classList.add('in-view'); }, 300);
+    });
+  }
+
+  // Achievement badges: pointer-tracked 3D tilt
+  var heroBadges = document.querySelectorAll('.hero-badge');
+  if (heroBadges.length && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    heroBadges.forEach(function (badge) {
+      badge.addEventListener('pointermove', function (e) {
+        var rect = badge.getBoundingClientRect();
+        var x = (e.clientX - rect.left) / rect.width - 0.5;
+        var y = (e.clientY - rect.top) / rect.height - 0.5;
+        badge.style.transform = 'rotateY(' + (x * 32) + 'deg) rotateX(' + (y * -32) + 'deg) translateZ(6px)';
+      });
+      badge.addEventListener('pointerleave', function () {
+        badge.style.transform = '';
+      });
+    });
+  }
+
   // Back to top
   var backToTop = document.querySelector('.back-to-top');
   if (backToTop) {
