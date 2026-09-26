@@ -81,6 +81,45 @@
     });
   }
 
+  // Creative cursor: dot + lagging ring, expands over interactive elements
+  var wantsCursor = window.matchMedia('(hover: hover) and (pointer: fine)').matches
+    && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (wantsCursor) {
+    var cursorDot = document.querySelector('.cursor-dot');
+    var cursorRing = document.querySelector('.cursor-ring');
+    document.documentElement.classList.add('cursor-active');
+
+    var mouseX = -100, mouseY = -100, ringX = -100, ringY = -100;
+    var ringScale = 1, targetScale = 1;
+    document.addEventListener('mousemove', function (e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      cursorDot.style.transform = 'translate3d(' + mouseX + 'px,' + mouseY + 'px,0)';
+    });
+
+    (function tick() {
+      ringX += (mouseX - ringX) * 0.18;
+      ringY += (mouseY - ringY) * 0.18;
+      ringScale += (targetScale - ringScale) * 0.25;
+      cursorRing.style.transform = 'translate3d(' + ringX + 'px,' + ringY + 'px,0) scale(' + ringScale + ')';
+      requestAnimationFrame(tick);
+    })();
+
+    var interactiveSelector = 'a, button, .btn, .icon-link, .tag, .card, .project-pill, .hero-badge, .skill-cluster';
+    document.addEventListener('mouseover', function (e) {
+      if (e.target.closest(interactiveSelector)) {
+        targetScale = 1.625;
+        cursorRing.classList.add('is-active');
+      }
+    });
+    document.addEventListener('mouseout', function (e) {
+      if (e.target.closest(interactiveSelector)) {
+        targetScale = 1;
+        cursorRing.classList.remove('is-active');
+      }
+    });
+  }
+
   // Back to top
   var backToTop = document.querySelector('.back-to-top');
   if (backToTop) {

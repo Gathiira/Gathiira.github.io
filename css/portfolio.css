@@ -677,6 +677,39 @@ svg { display: block; }
 .back-to-top:hover { background: var(--accent-dark); }
 .back-to-top svg { width: 18px; height: 18px; }
 
+/* ---------- Creative cursor ---------- */
+.cursor-dot, .cursor-ring {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+  transform: translate3d(-50%, -50%, 0);
+}
+.cursor-active .cursor-dot, .cursor-active .cursor-ring { display: block; }
+.cursor-active { cursor: none; }
+.cursor-active a, .cursor-active button, .cursor-active .btn { cursor: none; }
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  background: var(--accent);
+}
+.cursor-ring {
+  width: 32px;
+  height: 32px;
+  margin: -16px 0 0 -16px;
+  border: 1px solid var(--accent);
+  opacity: 0.55;
+  transition: opacity 0.2s var(--ease), background 0.2s var(--ease);
+}
+.cursor-ring.is-active {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  opacity: 0.9;
+}
+
 /* ---------- Reveal-on-scroll ---------- */
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.5s var(--ease), transform 0.5s var(--ease); }
 .reveal.in-view { opacity: 1; transform: translateY(0); }

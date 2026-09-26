@@ -2,8 +2,8 @@ name: Update activity graph
 
 on:
   schedule:
-    # 03:17 UTC daily — off the hour to avoid GitHub Actions' load spikes.
-    - cron: '17 3 * * *'
+    # 03:17 UTC on the 1st of each month — off the hour to avoid GitHub Actions' load spikes.
+    - cron: '17 3 1 * *'
   workflow_dispatch: {}
 
 permissions:
