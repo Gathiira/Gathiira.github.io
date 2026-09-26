@@ -129,3 +129,9 @@ dmypy.json
 .pyre/
 .idea/
 .DS_Store
+PRODUCT.md
+DESIGN.md
+.agents
+.claude
+.impeccable
+skills-lock.json

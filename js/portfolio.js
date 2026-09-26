@@ -57,23 +57,6 @@
     revealEls.forEach(function (el) { el.classList.add('in-view'); });
   }
 
-  // Animate skill bars once visible
-  var skillBars = document.querySelectorAll('.skill-bar-fill');
-  if (skillBars.length && 'IntersectionObserver' in window) {
-    var barObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          var el = entry.target;
-          el.style.width = el.getAttribute('data-percent') + '%';
-          barObserver.unobserve(el);
-        }
-      });
-    }, { threshold: 0.4 });
-    skillBars.forEach(function (el) { barObserver.observe(el); });
-  } else {
-    skillBars.forEach(function (el) { el.style.width = el.getAttribute('data-percent') + '%'; });
-  }
-
   // Back to top
   var backToTop = document.querySelector('.back-to-top');
   if (backToTop) {

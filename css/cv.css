@@ -1,25 +1,25 @@
 :root{
-  --ink:#16202B;
-  --ink-soft:#4A5568;
-  --paper:#FAFAF8;
-  --paper-raised:#FFFFFF;
-  --line:#DADFE3;
-  --accent:#2563EB;
-  --accent-soft:#E8EFF6;
-  --tag-bg:#EEF1F3;
-  --tag-text:#33414F;
+  --ink:#10130f;
+  --ink-soft:#4b5249;
+  --paper:#f8f9f7;
+  --paper-raised:#ffffff;
+  --line:#e2e6e1;
+  --accent:#0b7259;
+  --accent-soft:#e3f5ee;
+  --tag-bg:#eef1ee;
+  --tag-text:#3d453f;
 }
 @media (prefers-color-scheme: dark){
   :root{
-    --ink:#E7ECF1;
-    --ink-soft:#A8B3BE;
-    --paper:#12181F;
-    --paper-raised:#171F28;
-    --line:#2B3542;
-    --accent:#5B93FF;
-    --accent-soft:#1C2A38;
-    --tag-bg:#1D2731;
-    --tag-text:#C4CDD6;
+    --ink:#eef1ec;
+    --ink-soft:#aab3a5;
+    --paper:#0a0d0b;
+    --paper-raised:#12160f;
+    --line:#232b22;
+    --accent:#34d399;
+    --accent-soft:#132a22;
+    --tag-bg:#182019;
+    --tag-text:#b6c2b8;
   }
 }
 
@@ -28,7 +28,7 @@ body{
   margin:0;
   background:var(--paper);
   color:var(--ink);
-  font-family:"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-family:"Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   -webkit-font-smoothing:antialiased;
 }
 .sheet{
@@ -55,7 +55,7 @@ body{
   color:var(--ink-soft);
   background:none;
   border:1px solid var(--line);
-  border-radius:6px;
+  border-radius:8px;
   padding:7px 12px;
   cursor:pointer;
   text-decoration:none;
@@ -130,12 +130,13 @@ h2{
 }
 .tags{ display:flex; flex-wrap:wrap; gap:6px; }
 .tag{
-  font-family:"SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-family:"Space Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-weight:700;
   font-size:0.74rem;
   background:var(--tag-bg);
   color:var(--tag-text);
-  border-radius:4px;
-  padding:3px 8px;
+  border-radius:999px;
+  padding:3px 10px;
   line-height:1.4;
 }
 
@@ -173,7 +174,7 @@ table.map tr:last-child td{ border-bottom:none; }
 }
 .role-title{ font-size:1.02rem; font-weight:600; }
 .role-dates{
-  font-family:"SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-family:"Space Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-size:0.78rem;
   color:var(--ink-soft);
   white-space:nowrap;
@@ -224,38 +225,39 @@ footer.note{
 }
 
 @media print{
-  @page{ size:auto; margin:0; }
+  @page{ size:auto; margin:12mm 14mm; }
   html{ font-size:14px; }
   body{ background:#fff; color:#000; margin:0; }
-  .sheet{ max-width:none; padding:12mm 14mm; }
+  .sheet{ max-width:none; padding:0; }
   .page-actions{ display:none; }
   a{ color:inherit; text-decoration:none; }
 
   header.masthead{ padding-bottom:10px; margin-bottom:16px; }
   h1{ font-size:1.5rem; margin:0 0 2px; }
   .role-line{ font-size:0.86rem; }
-  .contact{ font-size:0.74rem; line-height:1.45; }
+  .contact{ font-size:0.8rem; line-height:1.45; }
 
   section{ margin-bottom:14px; }
-  h2{ font-size:0.66rem; margin:0 0 8px; }
+  h2{ font-size:0.8rem; margin:0 0 8px; }
 
-  .profile p{ font-size:0.84rem; line-height:1.45; }
+  .profile p{ font-size:0.84rem; line-height:1.45; max-width:none; }
 
   .skill-row{ padding:5px 0; break-inside:avoid; }
-  .skill-label{ font-size:0.72rem; }
-  .tag{ font-size:0.68rem; padding:2px 6px; }
+  .skill-label{ font-size:0.8rem; }
+  .tag{ font-size:0.8rem; padding:2px 8px; }
 
-  table.map{ font-size:0.76rem; }
+  table.map{ font-size:0.8rem; }
   table.map th{ padding:0 10px 5px 0; }
   table.map td{ padding:6px 10px 6px 0; }
   table.map tr{ break-inside:avoid; }
 
+  .experience-section{ break-before:page; page-break-before:always; }
   .role{ margin-bottom:12px; break-inside:avoid; }
   .role-title{ font-size:0.9rem; }
-  .role-dates{ font-size:0.7rem; }
-  .role-stack{ font-size:0.74rem; margin:1px 0 6px; }
+  .role-dates{ font-size:0.8rem; }
+  .role-stack{ font-size:0.8rem; margin:1px 0 6px; }
   ul.bullets li{ font-size:0.8rem; line-height:1.4; margin-bottom:4px; }
 
   .edu-title, .ref-name{ font-size:0.84rem; }
-  .edu-sub, .ref-sub{ font-size:0.76rem; }
+  .edu-sub, .ref-sub{ font-size:0.8rem; }
 }
