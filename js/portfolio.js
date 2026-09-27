@@ -101,7 +101,10 @@
       ringX += (mouseX - ringX) * 0.18;
       ringY += (mouseY - ringY) * 0.18;
       ringScale += (targetScale - ringScale) * 0.25;
-      cursorRing.style.transform = 'translate3d(' + ringX + 'px,' + ringY + 'px,0) scale(' + ringScale + ')';
+      var t = Date.now() * 0.002;
+      var driftX = Math.sin(t) * 3;
+      var driftY = Math.cos(t * 1.3) * 3;
+      cursorRing.style.transform = 'translate3d(' + (ringX + driftX) + 'px,' + (ringY + driftY) + 'px,0) scale(' + ringScale + ')';
       requestAnimationFrame(tick);
     })();
 
