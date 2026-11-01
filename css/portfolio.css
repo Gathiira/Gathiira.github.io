@@ -605,6 +605,7 @@ svg { display: block; }
 .card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
 .card-media { aspect-ratio: 16/10; overflow: hidden; background: var(--tag-bg); }
 .card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.35s var(--ease); }
+.card-media--logo img { object-fit: contain; padding: 12%; }
 .card:hover .card-media img { transform: scale(1.05); }
 
 #article-section .cards-grid { grid-template-columns: 1fr; }

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- The header's mark: a "G" on a rounded square in the theme's primary colours, flipped for dark mode -->
+  <style>
+    .tile { fill: #171717; }
+    .g { stroke: #fafafa; }
+    @media (prefers-color-scheme: dark) {
+      .tile { fill: #e5e5e5; }
+      .g { stroke: #171717; }
+    }
+  </style>
+  <rect class="tile" width="32" height="32" rx="8" />
+  <path class="g" d="M20.8 10.3 A7.5 7.5 0 1 0 23.5 16 H16.5" fill="none" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

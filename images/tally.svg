@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="128" fill="#0f766e"/>
+  <!-- Tally brand mark: stylized 't' and dot -->
+  <path d="M190 140v60h-50v50h50v100c0 45 25 62 70 62 25 0 45-6 55-12v-48c-8 4-18 6-30 6-22 0-35-8-35-32V250h65v-50h-65v-60h-60z" fill="#ffffff"/>
+  <circle cx="365" cy="370" r="32" fill="#2dd4bf"/>
+</svg>

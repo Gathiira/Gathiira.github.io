@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="36 150 440 240" fill="none">
+  <defs><clipPath id="above"><path d="M0 0H512V384H472C388 368 324 290 256 224C188 290 124 368 40 384H0z"/></clipPath></defs>
+  
+  <!-- Rental mark: a swept roof tapering to points, chimney, four-pane window -->
+  <rect x="348" y="200" width="38" height="200" fill="#4f46e5" clip-path="url(#above)"/>
+  <path d="M40 384C120 362 180 254 256 160C332 254 392 362 472 384C388 368 324 290 256 224C188 290 124 368 40 384z" fill="#4f46e5"/>
+  <path d="M215 286h36v36h-36zM261 286h36v36h-36zM215 332h36v36h-36zM261 332h36v36h-36z" fill="#0f172a"/>
+</svg>
